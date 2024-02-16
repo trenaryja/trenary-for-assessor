@@ -11,11 +11,4 @@ export const links = [
 
 export type LinkId = (typeof links)[number]['id']
 
-export const getLink = (id: (typeof links)[number]['id']) => links.find((link) => link.id === id)!
-
-export const scrollTo = (id: LinkId) => {
-  if (!id) return
-  const element = document.getElementById(id)
-  element?.scrollIntoView({ behavior: 'smooth' })
-  window.addEventListener('scrollend', () => (window.location.hash = id), { once: true })
-}
+export const ELECTION_DATE = new Date('2024-05-14T00:00:00.000-05:00')

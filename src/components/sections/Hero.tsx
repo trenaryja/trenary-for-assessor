@@ -17,7 +17,7 @@ export const Hero = () => {
             Learn More
           </Link>
         </div>
-        <div className='glow rounded-full relative bg-base-100 order-first sm:order-last'>
+        <div className='glow rounded-full bg-base-100 order-first sm:order-last'>
           <Image src={Headshot} alt='Joseph Trenary' priority />
         </div>
       </div>

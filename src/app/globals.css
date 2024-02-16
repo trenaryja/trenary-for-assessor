@@ -13,6 +13,9 @@
   initial-value: 0deg;
   inherits: false;
 }
+.glow {
+  position: relative;
+}
 
 .glow::before,
 .glow::after {

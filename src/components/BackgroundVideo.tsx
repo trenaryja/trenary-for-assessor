@@ -8,7 +8,7 @@ export const BackgroundVideo = ({ className, ...props }: BackgroundVideoProps) =
       autoPlay
       muted
       loop
-      className={cn('fixed inset-0 w-full h-full object-cover z-[-1] opacity-10', className)}
+      className={cn('fixed inset-0 w-screen h-screen object-cover z-[-1] opacity-10', className)}
       {...props}
     />
   )
