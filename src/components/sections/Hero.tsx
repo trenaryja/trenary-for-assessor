@@ -9,7 +9,7 @@ export const Hero = () => {
     <Section id='meet-joe'>
       <div className='grid sm:grid-flow-col place-items-center gap-8'>
         <div className='grid gap-4 text-center place-items-center'>
-          <Heading size='h1'>Hello! I&apos;m Joe</Heading>
+          <Heading size='h1'>Hello! I'm Joe</Heading>
 
           <p>I want to be your choice in candidate for Berkeley County Assessor.</p>
 
