@@ -19,15 +19,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning lang='en'>
+    <html suppressHydrationWarning lang='en' className='scroll-smooth'>
       <head>
         <script src='/theme.js' />
       </head>
       <body className={cn(font.className, 'grid grid-rows-[auto_1fr_auto] min-h-[100dvh]')}>
         <Header />
-        <main className='grid grid-cols-[1fr_min(80ch,_100%)_1fr] [&>*]:col-[2] [&>.full-bleed]:col-[1/4] p-4'>
-          {children}
-        </main>
+        <main className='full-bleed-container'>{children}</main>
         <Footer />
       </body>
     </html>

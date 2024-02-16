@@ -1,22 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Headshot from '/public/Headshot.png'
+import { BackgroundVideo } from '@/components/BackgroundVideo'
+import { Contact } from '@/components/sections/Contact'
+import { Hero } from '@/components/sections/Hero'
+import { Platform } from '@/components/sections/Platform'
 
 export default function Home() {
   return (
     <>
-      <section className='grid sm:flex items-center gap-4'>
-        <div className='grid gap-4 text-center'>
-          <h1 className='text-6xl font-extrabold tracking-tight'>Hello! I&apos;m Joe</h1>
-
-          <p>I want to be your choice in candidate for Berkeley County Assessor.</p>
-
-          <Link href='#' className='btn btn-primary w-fit justify-self-center'>
-            Learn More
-          </Link>
-        </div>
-        <Image src={Headshot} alt='Joseph Trenary' className='' priority />
-      </section>
+      <BackgroundVideo src='/bg-video.mp4' />
+      <Hero />
+      <Platform />
+      <Contact />
     </>
   )
 }

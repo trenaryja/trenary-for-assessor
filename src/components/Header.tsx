@@ -1,24 +1,29 @@
 import { Logo } from '@/components/Logo'
+import { links } from '@/lib/utils'
 import Link from 'next/link'
 import { ComponentProps } from 'react'
 
 const HeaderLink = (props: ComponentProps<typeof Link>) => (
   <li>
-    <Link {...props} className='link link-hover font-bold' />
+    <Link {...props} className='font-bold btn btn-primary' />
   </li>
 )
 
 export const Header = () => {
   return (
-    <header className='grid justify-center gap-4 sm:justify-between sm:flex p-4 items-end bg-base-200'>
-      <Logo />
-      <nav className='text-lg'>
-        <ul className='flex gap-4 whitespace-nowrap'>
-          <HeaderLink className='link link-hover font-bold' href={'#meet-joe'} children='Meet Joe' />
-          <HeaderLink className='link link-hover font-bold' href={'#issues'} children='Issues' />
-          <HeaderLink className='link link-hover font-bold' href={'#contact'} children='Contact' />
-        </ul>
-      </nav>
+    <header className='full-bleed-container full-bleed bg-base-200'>
+      <div className='grid sm:grid-flow-col place-items-center gap-4'>
+        <Logo />
+        <nav className='text-lg'>
+          <ul className='flex gap-4 whitespace-nowrap'>
+            {links.map((link) => (
+              <HeaderLink key={link.id} href={`#${link.id}`}>
+                {link.label}
+              </HeaderLink>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }
