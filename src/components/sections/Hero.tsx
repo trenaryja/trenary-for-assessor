@@ -18,7 +18,7 @@ export const Hero = () => {
           </Link>
         </div>
         <div className='glow rounded-full bg-base-100 order-first sm:order-last'>
-          <Image src={Headshot} alt='Joseph Trenary' priority />
+          <Image src={Headshot} alt='Joseph Trenary' priority className='rounded-full' />
         </div>
       </div>
     </Section>
