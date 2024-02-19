@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Heading } from '../Heading'
 import { Section } from './Section'
+import Headshot from '/public/Headshot.png'
 
 export const Hero = () => {
   return (
@@ -17,7 +18,7 @@ export const Hero = () => {
           </Link>
         </div>
         <div className='glow rounded-full bg-base-100 order-first sm:order-last'>
-          <Image src='/headshot.png' alt='Joseph Trenary' priority className='rounded-full' width={1472} height={1472}/>
+          <Image src={Headshot} alt='Joseph Trenary' priority />
         </div>
       </div>
     </Section>
