@@ -23,7 +23,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.11.19",
-    "@types/react": "^18",
+    "@types/react": "^18.2.56",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
@@ -44,7 +44,10 @@
     "semi": false,
     "printWidth": 120,
     "singleQuote": true,
-    "jsxSingleQuote": true
+    "jsxSingleQuote": true,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   },
   "postcss": {
     "plugins": {

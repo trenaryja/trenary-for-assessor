@@ -21,7 +21,7 @@ export const Section = ({ id, children, className, ...props }: SectionProps) => 
       ref={ref}
       id={id}
       className={cn(
-        'grid place-items-center h-screen p-4 transition-all duration-500  delay-100',
+        'grid place-items-center min-h-screen px-4 py-8 transition-all duration-500 delay-100',
         inView ? 'opacity-100 blur-0 scale-x-100' : 'opacity-0 blur-3xl scale-x-75',
         className,
       )}
