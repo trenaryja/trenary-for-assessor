@@ -1,4 +1,5 @@
-import { cn } from '@/lib/utils'
+import { cn, slugify } from '@/lib/utils'
+import Link from 'next/link'
 import { ComponentProps } from 'react'
 
 const sizes = {
@@ -10,15 +11,30 @@ const sizes = {
   h6: 'text-base font-bold',
 }
 
-export type HeadingProps = ComponentProps<'h1'> & {
-  size: keyof typeof sizes
-}
+export type HeadingProps = ComponentProps<'h1'> &
+  Omit<ComponentProps<typeof Link>, 'href'> & {
+    size: keyof typeof sizes
+    clickable?: boolean
+    href?: string
+  }
 
-export const Heading = (props: HeadingProps) => {
-  const { size, className, children, ...rest } = props
-  const Element = size
+export const Heading = ({ size, className, children, clickable, id, href, ...props }: HeadingProps) => {
+  const Element = clickable ? Link : size
+  const _id = id ?? typeof children === 'string' ? slugify(children as string) : undefined
   return (
-    <Element className={cn(sizes[size], className)} {...rest}>
+    <Element
+      id={_id}
+      className={cn(
+        sizes[size],
+        {
+          'cursor-pointer': clickable,
+          'hover:underline': clickable,
+        },
+        className,
+      )}
+      href={href ?? `#${_id}`}
+      {...props}
+    >
       {children}
     </Element>
   )

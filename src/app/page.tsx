@@ -6,7 +6,7 @@ import { Platform } from '@/components/sections/Platform'
 export default function Home() {
   return (
     <>
-      <BackgroundVideo src='/bg-video.mp4' />
+      <BackgroundVideo src='https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmwxeDR4dHh3Ynlzd3Uxd2IwNGx2dmhuc2ZpdDNjZ2RocWF2N2I5NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KJljdj1rpFvNNgvJKI/giphy.mp4' />
       <Hero />
       <Platform />
       <Contact />
