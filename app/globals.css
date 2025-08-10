@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+@plugin "daisyui" {
+	themes: business --default;
+}
+
+@utility full-bleed-container {
+	@apply grid content-start grid-cols-[1fr_min(80ch,100%)_1fr] [&>*]:col-2;
+}
+
+@utility full-bleed {
+	@apply col-span-full w-full;
+}
+
+@utility debug {
+	@apply !border !border-red-500;
+}
+
+@property --gradient-angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@utility glow {
+	position: relative;
+}
+/* @utility glow::before,
+@utility glow::after {
+	content: '';
+	position: absolute;
+	inset: -0.5rem;
+	z-index: -1;
+	background: conic-gradient(
+		from var(--gradient-angle),
+		oklch(var(--color-primary)),
+		oklch(var(--color-secondary)),
+		oklch(var(--color-secondary)),
+		oklch(var(--color-primary))
+	);
+	border-radius: inherit;
+	animation: rotate 5s linear infinite;
+}
+@utility glow::after {
+	filter: blur(3.5rem);
+} */
+
+@keyframes rotate {
+	0% {
+		--gradient-angle: 0deg;
+	}
+	100% {
+		--gradient-angle: 360deg;
+	}
+}
